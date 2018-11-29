@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <title>Appfirst</title>
+</head>
+<body>
+    <header>
+        <ul id="ulMenuPrincipal">
+            <li>
+                Inicio
+            </li>
+            <li>
+                Personas
+            </li>
+            <li>
+                Reporte
+            </li>
+            <li>
+                Salir
+            </li>
+        </ul>
+    </header>
+    <form id="formID" class="formular" method="post">
+        <fieldset>
+            <legend>
+                Requerido!
+            </legend>
+            <label>
+                <span>Este campo es requerido: </span>
+                <input value="" class="validate[required] text-input" type="text" name="req" id="req" />
+            </label>
+            <legend>
+                Opcional
+            </legend>
+            <label>
+                <span>Este campo es opcional : </span>
+                <input value="" class="validate[custom[url]] text-input" type="text" name="optional" id="optional" />
+            </label>
+            <legend>
+                Placeholder & required
+            </legend>
+            <label>
+                <span>Deporte favorito 1:</span>
+                <select name="sport" id="sport" class="validate[required]">
+                    <option value="">Seleccione un deporte</option>
+                    <option value="option1">Tennis</option>
+                    <option value="option2">Football</option>
+                    <option value="option3">Golf</option>
+                </select>
+            </label>
+            <label>
+                <span>Deporte favorito 2:</span>
+                <select name="sport2" id="sport2" multiple class="validate[required]">
+                    <option value="">Seleccione un deporte</option>
+                    <option value="option1">Tennis</option>
+                    <option value="option2">Football</option>
+                    <option value="option3">Golf</option>
+                </select>
+            </label>
+            <br />
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Personalizado
+            </legend>
+            <label>
+                <p>Viene con muchas expresiones regulares predifined (teléfono, URL, ip, email..etc)</p>
+                <br />
+                <span>Ingresar URL : </span>
+                <input value="http://" class="validate[required,custom[url]] text-input" type="text" name="url" id="url" />
+                <br />
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Iguales
+            </legend>
+            <label>
+                <span>Password : </span>
+                <input value="karnius" class="validate[required] text-input" type="password" name="password" id="password" />
+            </label>
+            <label>
+                <span>COnfirmar password : </span>
+                <input value="kaniusBAD" class="validate[required,equals[password]] text-input" type="password" name="password2" id="password2" />
+                <br />
+            </label>
+        </fieldset>
+        <input class="submit" type="submit" value="Validate &amp; Validar formulario" /><hr />
+    </form>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="scripts/sqlite.js"></script>
+</body>
+</html>

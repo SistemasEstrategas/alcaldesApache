@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <!--
+        Personalice la directiva de seguridad de contenido en la etiqueta meta como sea necesario. Agregue "unsafe-inline" a default-src para permitir JavaScript insertado.
+        Para obtener más detalles, consulte http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+   
+    <title>AppMovil4</title>
+</head>
+<body>
+    <!---PAGINA 1-->
+    <!--<div data-role="page" id="pagina1">
+        <div data-role="header" data-position="fixed">
+            <h1>REGISTRO DE DATOS</h1>
+        </div>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="search">Consulta</a></li>
+                <li><a href="#pagina2" data-icon="plus">Registro</a></li>
+            </ul>
+        </div>
+
+        <div data-role="content">
+            <div class="titlepage">Buscar usuario</div>
+            <div style="width:100%; display:inline">
+                <div style="float: left; width:60%; padding-right:3px;margin-top:3px;">
+                    <input type="text" id="txtNombre" data-clear-btn="true" />
+                </div>
+                <div style="float: left; width:35%;">
+                    <button id="btnBuscar">Buscar</button>
+                </div>
+            </div>
+            <div id="divResultado"></div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h3>Tutorial Apache Cordova</h3>
+        </div>
+    </div>-->
+
+    <!---PAGINA 2-->
+    <div data-role="page" id="pagina2">
+        <div data-role="header" data-position="fixed">
+            <h3>REGISTRO DE DATOS</h3>
+        </div>
+
+
+        <div data-role="content">
+            <div class="titlepage">Registrar usuario</div>
+            <div class="ui-field-contain">
+                <label for="txtnombre">Nombre:</label>
+                <input id="txtnombre" type="text" placeholder="Nombre" value="" required>
+                <label for="txttelefono">Telefono:</label>
+                <input id="txttelefono" type="tel" placeholder="Telefono" value="" required>
+                <label for="txtcorreo">Correo:</label>
+                <input id="txtcorreo" type="email" placeholder="Correo" value="">
+                <label for="tipoincidencia">Tipo Incidencia:</label>
+
+                <select id="tipoincidencia" SIZE=1>
+                    <option value="0">Seleccione</option>
+                    <option value="1">Alumbrado público</option>
+                    <option value="2">Seguridad</option>
+                    <option value="3">Limpia</option>
+                    <option value="4">Agua y drenaje</option>
+                    <option value="5">Parques y jardines</option>
+                    <option value="6">Vialidad y pavimentos</option>
+                    <option value="7">Obras en Proceso</option>
+                    <option value="8">Otros</option>
+                </select>
+
+
+                <label for="txtDescripcion">Descripcion:</label>
+                <textarea id="txtDescripcion" type="text" placeholder="Descripcion" value="">
+</textarea>
+
+                <button id="btnGuardar" data-inline="true">Guardar</button>
+            </div>
+            <div id="divRegistro"></div>
+        </div>
+        <div id="status" name="status">Status Message</div>
+        <!--<div data-role="footer" data-position="fixed">
+        <h3>Tutorial Apache Cordova</h3>
+    </div>-->
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="scripts/incidencia.js"></script>
+
+
+
+</body>
+</html>
